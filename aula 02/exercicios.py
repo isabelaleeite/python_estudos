@@ -135,15 +135,22 @@ print(resultado_igual)"""
 
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
 
-numero1 = int(input('Digite um numero: '))
+"""numero1 = int(input('Digite um numero: '))
 numero2 = int(input('Digite outro numero: '))
 resultado_igual = numero1 != numero2
-print(resultado_igual)
+print(resultado_igual)"""
 
-# #### try-except e if
+# #### try-except e if TESTE DE INTEGRAÇÃO
 
-
-
+try:
+    numero_01 = int(input("Inserir um numero inteiro: "))
+    numero_02 = int(input("Inserir um numero inteiro: "))
+    resultado = numero_01 // numero_02
+    print(resultado)
+except ZeroDivisionError:
+    print("integer division or modulo by zero")
+except KeyboardInterrupt:
+    print("Acho que voce nao quis inserir um numero")
 # 21: Conversor de Temperatura
 
 # 22: Verificador de Palíndromo
