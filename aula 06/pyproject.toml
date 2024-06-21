@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "aula 06"
+version = "0.1.0"
+description = ""
+authors = ["Isabela.leite <isabela.leeite@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flake8 = "^7.1.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+pre-commit = "^3.7.1"
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.13.0"
+
+[tool.taskipy.tasks]
+format = '''
+isort main.py
+black main.py
+flake8 main.py
+'''
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
